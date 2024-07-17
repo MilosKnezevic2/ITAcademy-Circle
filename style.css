@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #050210;
+}
+
+.omotac {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.krug {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #0b0c2a;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.384);
+}
+
+.omotac::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    padding: 20px;
+    background: conic-gradient(
+        #fb5dad,
+        #55fb9f,
+        #b97aff
+    );
+    animation: rotate 0.8s linear infinite;
+}
+
+.unutrasnji-krug {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.132) 0%, rgba(255, 255, 255, 0) 90%);
+    animation: pulse 2s infinite;
+}
+
+.unutrasnji-krug2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.132) 0%, rgba(255, 255, 255, 0) 90%);
+    animation: pulse2 2s infinite 2s;
+}
+
+.delay{
+    animation-delay: 1s;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0; 
+    }
+}
+
+@keyframes pulse2 {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    30%{
+        transform: scale(0);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
